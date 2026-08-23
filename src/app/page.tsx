@@ -148,7 +148,7 @@ export default function Home() {
               <span>GV</span>
               <span>CA</span>
             </div>
-            <div>
+            <div className="viewer-copy">
               <strong>3 amigos assistindo</strong>
               <span>Conexão protegida</span>
             </div>

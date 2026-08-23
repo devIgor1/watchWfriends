@@ -576,11 +576,15 @@ a:focus-visible {
 
 .viewer-avatars {
   display: flex;
+  align-items: center;
+  flex: 0 0 auto;
 }
 
 .viewer-avatars span {
   width: 34px;
   height: 34px;
+  position: relative;
+  flex: 0 0 34px;
   display: grid;
   place-items: center;
   margin-left: -8px;
@@ -591,6 +595,8 @@ a:focus-visible {
   font-family: var(--font-mono), monospace;
   font-size: 9px;
   font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
 }
 
 .viewer-avatars span:first-child {
@@ -602,13 +608,21 @@ a:focus-visible {
   background: var(--acid);
 }
 
+.viewer-avatars span:nth-child(1) { z-index: 3; }
+.viewer-avatars span:nth-child(2) { z-index: 2; }
+.viewer-avatars span:nth-child(3) { z-index: 1; }
+
+.viewer-copy {
+  min-width: 0;
+}
+
 .viewer-stack strong,
 .audio-card strong {
   display: block;
   font-size: 12px;
 }
 
-.viewer-stack div > span,
+.viewer-copy > span,
 .audio-card div > span {
   display: block;
   margin-top: 2px;
