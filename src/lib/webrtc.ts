@@ -58,7 +58,7 @@ export async function captureDisplay() {
       echoCancellation: false,
       noiseSuppression: false,
     },
-    preferCurrentTab: true,
+    preferCurrentTab: false,
     selfBrowserSurface: "exclude",
     surfaceSwitching: "include",
     systemAudio: "include",

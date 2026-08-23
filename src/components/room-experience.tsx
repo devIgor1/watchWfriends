@@ -63,7 +63,7 @@ const statusCopy: Record<ExperienceStatus, string> = {
   "config-error": "Configuração necessária",
   connecting: "Conectando à sala",
   ended: "Sessão encerrada",
-  error: "Falha na conexão",
+  error: "Falha ao compartilhar",
   ready: "Sala pronta",
   sharing: "Transmitindo agora",
   waiting: "Aguardando transmissão",
@@ -170,10 +170,16 @@ export function RoomExperience({ roomId }: { roomId: string }) {
     } catch (error) {
       if (error instanceof DOMException && error.name === "NotAllowedError") {
         setStatus("ready");
-        setStatusDetail("O compartilhamento foi cancelado.");
+        setStatusDetail("O compartilhamento foi cancelado ou não autorizado.");
+      } else if (error instanceof DOMException && error.name === "NotReadableError") {
+        setStatus("error");
+        setErrorMessage("O navegador encontrou a tela, mas o sistema bloqueou a captura. Feche outro aplicativo que possa estar compartilhando a tela e tente novamente.");
+      } else if (error instanceof DOMException && error.name === "InvalidStateError") {
+        setStatus("error");
+        setErrorMessage("A página precisa estar ativa para compartilhar. Volte para esta aba e clique novamente no botão.");
       } else {
         setStatus("error");
-        setErrorMessage("Não foi possível capturar sua tela. Revise a permissão do navegador e tente novamente.");
+        setErrorMessage("O navegador não conseguiu iniciar a captura. Atualize a página e tente compartilhar outra aba.");
       }
     } finally {
       setIsStarting(false);
