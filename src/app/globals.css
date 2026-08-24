@@ -1053,7 +1053,7 @@ a:focus-visible {
 .broadcast-state,
 .broadcast-role {
   font-family: var(--font-mono), monospace;
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
@@ -1183,7 +1183,7 @@ a:focus-visible {
   margin-top: 22px;
   color: #666e69;
   font-family: var(--font-mono), monospace;
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.13em;
 }
 
@@ -1251,7 +1251,7 @@ a:focus-visible {
   color: #d8dcd9;
   backdrop-filter: blur(12px);
   font-family: var(--font-mono), monospace;
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 0.08em;
 }
 
@@ -1291,7 +1291,7 @@ a:focus-visible {
   color: #e2e4e1;
   backdrop-filter: blur(14px);
   cursor: pointer;
-  font-size: 11px;
+  font-size: 12px;
   transition: background-color var(--transition), transform var(--transition);
 }
 
@@ -1347,7 +1347,7 @@ a:focus-visible {
 .broadcast-caption p,
 .broadcast-caption span {
   margin: 0;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .broadcast-caption p {
@@ -1357,7 +1357,7 @@ a:focus-visible {
 .broadcast-caption span {
   color: #5b625e;
   font-family: var(--font-mono), monospace;
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 0.05em;
   text-align: right;
   text-transform: uppercase;
@@ -1417,7 +1417,7 @@ a:focus-visible {
   display: block;
   color: #5d6560;
   font-family: var(--font-mono), monospace;
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -1757,7 +1757,7 @@ a:focus-visible {
   background: rgba(244, 240, 230, 0.025);
   color: #b7bdb9;
   cursor: pointer;
-  font-size: 11px;
+  font-size: 12px;
   transition: border-color var(--transition), background-color var(--transition);
 }
 
@@ -1767,7 +1767,7 @@ a:focus-visible {
 }
 
 .room-layout {
-  grid-template-columns: minmax(0, 1fr) 360px;
+  grid-template-columns: minmax(0, 1fr) 390px;
   gap: 22px;
 }
 
@@ -1779,7 +1779,7 @@ a:focus-visible {
   background: transparent;
   color: #8d9590;
   cursor: pointer;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .session-title:disabled {
@@ -1819,7 +1819,7 @@ a:focus-visible {
   outline: none;
   background: #111513;
   color: var(--cream);
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .session-title-form button {
@@ -1864,7 +1864,7 @@ a:focus-visible {
   border-radius: 999px;
   background: rgba(7, 9, 9, 0.75);
   color: #d8dcd9;
-  font-size: 8px;
+  font-size: 10px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -1966,7 +1966,7 @@ a:focus-visible {
   background: transparent;
   color: #8c948f;
   cursor: pointer;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .mic-mode-tabs button.selected {
@@ -1983,7 +1983,7 @@ a:focus-visible {
   background: rgba(15, 19, 17, 0.9);
   color: #c9cfcb;
   cursor: grab;
-  font-size: 10px;
+  font-size: 12px;
   user-select: none;
 }
 
@@ -1996,6 +1996,8 @@ a:focus-visible {
 .room-sidebar {
   height: min(690px, calc(100svh - 170px));
   min-height: 570px;
+  display: flex;
+  flex-direction: column;
   align-self: start;
   margin-top: 38px;
   padding: 18px;
@@ -2016,6 +2018,7 @@ a:focus-visible {
   gap: 14px;
   padding-bottom: 13px;
   border-bottom: 1px solid rgba(244, 240, 230, 0.08);
+  flex: 0 0 auto;
 }
 
 .sidebar-session-head strong {
@@ -2024,7 +2027,7 @@ a:focus-visible {
   margin-top: 4px;
   overflow: hidden;
   color: #e4e3dd;
-  font-size: 15px;
+  font-size: 18px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -2046,12 +2049,13 @@ a:focus-visible {
 .invite-actions {
   gap: 7px;
   padding: 13px 0 10px;
+  flex: 0 0 auto;
 }
 
 .invite-actions .button {
   min-height: 40px;
   flex: 1;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .whatsapp-button {
@@ -2069,7 +2073,7 @@ a:focus-visible {
 
 .whatsapp-button span {
   font-family: var(--font-mono), monospace;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
 }
 
@@ -2077,6 +2081,7 @@ a:focus-visible {
   gap: 7px;
   padding-bottom: 12px;
   border-bottom: 1px solid rgba(244, 240, 230, 0.08);
+  flex: 0 0 auto;
 }
 
 .host-controls button {
@@ -2091,7 +2096,7 @@ a:focus-visible {
   background: rgba(244, 240, 230, 0.025);
   color: #949c97;
   cursor: pointer;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .host-controls .end-session-button {
@@ -2112,7 +2117,7 @@ a:focus-visible {
   border: 1px solid rgba(215, 255, 100, 0.1);
   border-radius: 9px;
   color: #919a94;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .social-tabs {
@@ -2121,6 +2126,7 @@ a:focus-visible {
   padding: 4px;
   border-radius: 11px;
   background: rgba(5, 7, 7, 0.5);
+  flex: 0 0 auto;
 }
 
 .social-tabs button {
@@ -2134,7 +2140,7 @@ a:focus-visible {
   background: transparent;
   color: #686f6b;
   cursor: pointer;
-  font-size: 10px;
+  font-size: 12px;
   transition: background-color var(--transition), color var(--transition);
 }
 
@@ -2152,15 +2158,17 @@ a:focus-visible {
   background: rgba(215, 255, 100, 0.1);
   color: var(--acid);
   font-family: var(--font-mono), monospace;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .participants-panel,
 .chat-panel {
-  height: calc(100% - 180px);
-  min-height: 320px;
+  height: auto;
+  min-height: 0;
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .participant-stack {
@@ -2177,7 +2185,7 @@ a:focus-visible {
 .participants-summary {
   margin: 7px 3px 11px;
   color: #777f7a;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .participants-list {
@@ -2188,7 +2196,7 @@ a:focus-visible {
 }
 
 .participant-row {
-  min-height: 57px;
+  min-height: 62px;
   gap: 9px;
   padding: 8px 3px;
   border-top: 1px solid rgba(244, 240, 230, 0.055);
@@ -2239,14 +2247,14 @@ a:focus-visible {
 
 .participant-name strong {
   color: #d7dad7;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
 }
 
 .participant-name span {
   margin-top: 3px;
   color: #5f6762;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .participant-mic {
@@ -2290,7 +2298,7 @@ a:focus-visible {
   border-top: 1px solid rgba(244, 240, 230, 0.06);
   color: #565e59;
   font-family: var(--font-mono), monospace;
-  font-size: 8px;
+  font-size: 10px;
   text-transform: uppercase;
 }
 
@@ -2311,7 +2319,7 @@ a:focus-visible {
   display: grid;
   grid-template-columns: 25px 1fr;
   gap: 8px;
-  padding: 8px 0;
+  padding: 10px 0;
 }
 
 .chat-message > div {
@@ -2327,21 +2335,21 @@ a:focus-visible {
 
 .chat-message strong {
   color: #9fa7a2;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 600;
 }
 
 .chat-message time {
   color: #4e5551;
   font-family: var(--font-mono), monospace;
-  font-size: 7px;
+  font-size: 9px;
 }
 
 .chat-message p {
   margin: 4px 0 0;
   overflow-wrap: anywhere;
   color: #c7cbc8;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.45;
 }
 
@@ -2363,13 +2371,13 @@ a:focus-visible {
 .empty-chat strong {
   margin-top: 11px;
   color: #8c948f;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .empty-chat span {
   max-width: 210px;
   margin-top: 5px;
-  font-size: 9px;
+  font-size: 11px;
   line-height: 1.45;
 }
 
@@ -2379,6 +2387,7 @@ a:focus-visible {
   gap: 6px;
   padding-top: 10px;
   border-top: 1px solid rgba(244, 240, 230, 0.07);
+  flex: 0 0 auto;
 }
 
 .chat-form input {
@@ -2390,7 +2399,7 @@ a:focus-visible {
   outline: none;
   background: rgba(5, 7, 7, 0.55);
   color: var(--cream);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .chat-form input:focus {
@@ -2418,6 +2427,7 @@ a:focus-visible {
   gap: 2px;
   padding-top: 8px;
   color: #59615c;
+  flex: 0 0 auto;
 }
 
 .sidebar-reactions button {
@@ -2425,7 +2435,7 @@ a:focus-visible {
   height: 28px;
   border-radius: 8px;
   background: transparent;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .profile-modal-backdrop {
@@ -2585,7 +2595,7 @@ a:focus-visible {
 
 @media (max-width: 1180px) {
   .room-layout {
-    grid-template-columns: minmax(0, 1fr) 330px;
+    grid-template-columns: minmax(0, 1fr) 350px;
   }
 
   .reaction-dock {
@@ -2608,7 +2618,8 @@ a:focus-visible {
     width: 100%;
     height: 600px;
     min-height: 0;
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin-top: 0;
   }
 
@@ -2671,12 +2682,12 @@ a:focus-visible {
 
   .mic-mode-tabs button {
     padding: 0 7px;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .push-talk-button {
     padding: 0 9px;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .room-sidebar {
