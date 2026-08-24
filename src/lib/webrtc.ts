@@ -3,6 +3,8 @@ export type SignalKind =
   | "host-ready"
   | "offer"
   | "answer"
+  | "viewer-offer"
+  | "host-answer"
   | "ice-candidate"
   | "stream-stopped"
   | "viewer-left"

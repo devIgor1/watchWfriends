@@ -8,10 +8,15 @@ Aplicação Next.js para criar uma sala por link e transmitir tela com áudio pa
 - link limpo de convite — quem cria permanece como anfitrião apenas naquela aba/sessão;
 - captura de aba, janela ou monitor com áudio quando o navegador oferece suporte;
 - transmissão WebRTC P2P para vários espectadores;
-- contador de participantes com Supabase Presence;
+- perfil persistente com apelido e avatar;
+- lista de participantes e estado do microfone com Supabase Presence;
+- chat em tempo real e reações flutuantes com Supabase Broadcast;
+- microfone aberto ou push-to-talk, distribuído pela malha WebRTC da sala;
+- nome editável para a sessão e convite direto pelo WhatsApp;
+- controles do anfitrião para trancar, remover participantes e encerrar a sessão;
 - reconexão automática e orientação quando um servidor TURN é necessário;
 - ativação manual de áudio quando a política de autoplay do navegador bloquear o som;
-- interface responsiva, tela cheia e estados completos de espera/erro/fim da sessão.
+- interface responsiva, volume, picture-in-picture, modo cinema, tela cheia e estados completos de espera/erro/fim da sessão.
 
 ## Rodar localmente
 
@@ -69,6 +74,8 @@ Essas credenciais chegam ao navegador por necessidade do protocolo. Em produçã
 - O suporte a áudio do monitor inteiro varia por navegador e sistema operacional.
 - Plataformas com DRM podem bloquear a captura ou exibir tela preta.
 - As salas não exigem login. O código longo funciona como segredo do convite, mas a sinalização usa um canal público. Para um produto aberto ao público, migre para autenticação e canais privados com políticas do Supabase.
+- O chat é efêmero e existe apenas durante a conexão atual; nenhuma mensagem é gravada em banco.
+- Trancar e remover participantes é uma moderação coordenada pelo anfitrião no canal atual. Autenticação e autorização no servidor continuam necessárias para impedir tentativas deliberadas de reconexão.
 - WebRTC criptografa a mídia em trânsito, mas isso não substitui autorização dos participantes nem o respeito a direitos autorais e aos termos do conteúdo transmitido.
 
 ## Arquitetura
@@ -76,10 +83,10 @@ Essas credenciais chegam ao navegador por necessidade do protocolo. Em produçã
 ```text
 Vercel / Next.js  ── entrega a interface
         │
-        └── Supabase Realtime ── ofertas, respostas, ICE e presença
+        └── Supabase Realtime ── sinalização, presença, chat, reações e controles
 
-Anfitrião ═════════ WebRTC criptografado ═════════ Espectador
-          ╚════════ WebRTC criptografado ═════════ Espectador
+Anfitrião ═════ tela + voz via WebRTC criptografado ═════ Espectador
+          ╚════ tela + voz via WebRTC criptografado ═════ Espectador
 ```
 
 ## Comandos
